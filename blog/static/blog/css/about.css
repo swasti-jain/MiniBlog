@@ -1,0 +1,9 @@
+.social-icon
+{
+    color:antiquewhite;
+    /* font-size: 12px; */
+
+}
+.social-icon:hover{
+    color:cadetblue;
+}

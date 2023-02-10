@@ -1,0 +1,108 @@
+{% extends 'blog/base.html' %} {% load static %} {% block content %}
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="col-sm-10">
+    <div class="app_videos">
+        <!-- video start -->
+
+
+        <div class="video">
+            <video controls autoplay src="blog/videos/video1.mp4" class="video_player"></video>
+
+            <!-- sidebar -->
+            <div class="videoSidebar">
+                <div class="videoSidebar_button">
+                    <span class="material-icons"> favorite_border </span>
+                    <p>12</p>
+                </div>
+                <div class="videoSidebar_button">
+                    <span class="material-icons"> chat </span>
+                    <p>52</p>
+                </div>
+                <div class="videoSidebar_button">
+                    <span class="material-icons"> share </span>
+                    <p>25</p>
+                </div>
+            </div>
+
+            <div class="videoFooter">
+                <div class="videoFooter_text">
+                    <h3>chaman Bahar</h3>
+                    <p class="videoFooter_description">Best of best</p>
+
+                    <div class="videoFooter_ticker">
+                        <span class="material-icons videoFooter_icon"> audiotrack </span>
+                        <marquee>Song name</marquee>
+                    </div>
+                </div>
+
+                <img class="videoFooter_record" src="blog/img/img2.png" alt="/"></img>
+            </div>
+        </div>
+
+        <!-- video ends -->
+
+        <!-- video start -->
+        <div class="video">
+            <video controls autoplay src="blog/videos/video2.mp4" class="video_player"></video>
+
+
+            <!-- sidebar -->
+            <div class="videoSidebar">
+                <div class="videoSidebar_button">
+                    <span class="material-icons"> favorite_border </span>
+                    <p>12</p>
+                </div>
+                <div class="videoSidebar_button">
+                    <span class="material-icons"> chat </span>
+                    <p>52</p>
+                </div>
+                <div class="videoSidebar_button">
+                    <span class="material-icons"> share </span>
+                    <p>25</p>
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="videoFooter">
+                <div class="videoFooter_text">
+                    <h3>chaman Bahar</h3>
+                    <p class="videoFooter_description">Best of best</p>
+
+                    <div class="videoFooter_ticker">
+                        <span class="material-icons videoFooter_icon"> audiotrack </span>
+                        <marquee>Song name</marquee>
+                    </div>
+                </div>
+
+                <img class="videoFooter_record" src="blog/img/img2.png" alt="/">
+            </div>
+        </div>
+        <!-- video ends -->
+    </div>
+
+    <script>
+        var videoPlaying = null;
+        const onPlay = function () {
+            if (videoPlaying && videoPlaying != this) {
+                videoPlaying.pause();
+            }
+            videoPlaying = this;
+        }
+
+        const videos = document.getElementsByClassName("video_player");
+        for (let i = 0; i < videos.length; i++) {
+            videos[i].addEventListener("play", onPlay);
+            videos[i].addEventListener('click', function () {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        }
+    </script>
+
+
+</div>
+{% endblock content %}
